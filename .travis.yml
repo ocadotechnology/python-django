@@ -11,3 +11,14 @@ install:
 - pip install -e .
 script:
 - make test
+deploy:
+  provider: pypi
+  user: opentracing-contrib
+  distributions: bdist_wheel sdist
+  server: https://test.pypi.org/legacy/ # FIXME
+  on:
+    all_branches: true
+    repo: ocadotechnology/python-django # FIXME
+    tags: true
+  password:
+    secure: ARlPfvwEqZl42zUU05qKUYPj7h7zyuGzoCY3zCYkuK7O1ypK5UQ0rLlzPEMmvqrTKnLZWZpNsXA0Fj+NvpBtPE7hU6UR9kNq08nCc4ePjv1/q4U2SPKKluDep4GHHi114bUUabYHi7e1wG4pStChWmXZ8HsVEBmH6h/+BM9CXiXfASfwX4kLKSZIQpEiQSduIdGLCwhLtfGSmJY0kYM66Mbo8gUh0rf1wj86qovnyeDvxeAMrB1/fH/adHP5OazkfVdcFEPQaXkw/Pdk5QiHskWn5CHyrpxGdvQYMkpWyeFcb+KkuNaz7WYzno9jhrPwa4FtVDHodH2wjq+F+5LFvmeoKA/7legMqUFKBelGUw3/4hzsO9avL/MQqshP8F3Uvt6jGzDR2qRnKoXqJxSgseo/5agVZvpjLnPNCsZTb4ICDTO8jQYDNCLUBmzMpuuH3jSrc9BzA6S2H/OIVnFt0cIp5A3czjP9xQy2GfyDrmnD6l2R/sAHxHF89gA3nLPSejVsReXsxdeAUVjSAE4YpWykjQHjgjFOXGfQFUFQPn+/HVulzWX7/VEllkzWYfisC+YmMx7d48rky1hatf/lJp9E/y1+5cz0Vg7tHn90MjQ9IxsDNWlaW5Zk2wp2Xe7xTa0YAc9FMsvoNfmRkHQ6FrRNKep5A3cErxQXHNWJpzg= # FIXME
