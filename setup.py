@@ -3,7 +3,7 @@ import versioneer
 
 version=versioneer.get_version()
 setup(
-    name='django_opentracing',
+    name='django_opentracing_test',
     cmdclass=versioneer.get_cmdclass(),
     version=version,
     url='https://github.com/opentracing-contrib/python-django/',
